@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Recruitment task</title>
+      <meta name="description" content="Recruitment task">
+      <meta name="author" content="Jeremiasz Wiśniewski">
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body>
+      <div id="loader" class="loading">
+         <div style="text-align:center;">
+            <h2><b class="logo">TableApp</b></h2>
+            <br>
+            <img src="./assets/spinner.gif" width="100rem"class="rotates" alt="Wait...">
+            <h3> Loading...</h3>
+         </div>
+      </div>
+      <nav>
+         <b class="logo">TableApp</b>
+         <div id="start-page-button-nav" key="content-start" class="page nav-pages">Start</div>
+         <div id="table-page-button-nav" key="content-table" class="page nav-pages">Table</div>
+      </nav>
+      <div class="nav-shadow"></div>
+      <div style="display:flex; height: calc(100% - 3rem); width: 100%;">
+         <div class="sidebar">
+            <div id="start-page-button" key="content-start" class="page">Start</div>
+            <div id="table-page-button" key="content-table" class="page">Table</div>
+         </div>
+         <div class="sidebar-shadow"></div>
+         <main>
+            <div class="main">
+               <div id="content-table" class="content-table">
+                  <div style="display: flex;">
+                     <div class="search">
+                        <label for="search">Search:</label>
+                        <input class="input" type="text" id="search"></input>
+                     </div>
+                     <div class="select">
+                        <label for="select">Select:</label>
+                        <select class="input" type="select" id="select">
+                           <option value="name">Name</option>
+                           <option value="currencies">Currency</option>
+                           <option value="languages">Language</option>
+                           <option value="population">Population</option>
+                           <option value="area">Area</option>
+                        </select>
+                     </div>
+                     <div class="avg">
+                        <label for="minPopulation">Min:</label>
+                        <input class="input text-center" type="number" id="minPopulation"></input>
+                     </div>
+                     <div class="avg2">
+                        <label for="maxPopulation">Max:</label>
+                        <input class="input text-center" type="number" id="maxPopulation"></input>
+                     </div>
+                  </div>
+                  <div style="flex: 1; overflow-y: auto ;">
+                     <table>
+                        <div>
+                           <thead style="position: sticky; top:0">
+                              <th id="name">Name</th>
+                              <th id="currencies">Currency</th>
+                              <th id="languages">Language</th>
+                              <th id="population">Population</th>
+                              <th id="area">Area</th>
+                              <th id="flag">Flag</th>
+                           </thead>
+                           <tbody id="table-body">
+                              <!-- content-here -->
+                           </tbody>
+                     </table>
+                     </div>
+                  </div>
+                  <div id="content-start" class="content-start">
+                     <div class="flex-box">
+                        <div class="results">
+                           <div class="panel">
+                              <div style="display: flex; justify-content: center;"><i class="fas fa-flag fa-2x icon"></i></div>
+                              <h5>Total number of countries <strong id="total"></strong></h5>
+                           </div>
+                           <div class="panel">
+                              <div style="display: flex; justify-content: center;"><i class="fas fa-user-friends fa-2x icon"></i></div>
+                              <h5>Average of population <strong id="avg-population"></strong></h5>
+                           </div>
+                           <div class="panel">
+                              <div style="display: flex; justify-content: center;"><i class="fas fa-globe-africa fa-2x icon"></i></div>
+                              <h5>Average of area <strong id="avg-area"></strong></h5>
+                           </div>
+                        </div>
+                        <div id="first-chart"class="column">
+                        </div>
+                        <div id="second-chart" class="column">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+         </main>
+         </div>
+      </div>
+      <script type="module" src="./js/app.js"/></script>
+   </body>
+</html>
